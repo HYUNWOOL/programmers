@@ -1,0 +1,28 @@
+class Solution {
+    public static boolean solution(String s) {
+        boolean answer = true;
+        char[] ch = new char[50];
+        int x=0,y=0;
+        for(int i=0;i<s.length();i++){
+            ch[i] = s.charAt(i);
+        }
+        for(int i=0;i<s.length();i++){
+            if(ch[i]=='p'||ch[i]=='P'){
+                x++;
+            }else if(ch[i]=='y'||ch[i]=='Y'){
+                y++;
+            }
+        }
+        if(x!=y){
+            answer=false;
+        }
+        return answer;
+    }
+    
+    public static void main(String[] args){
+        
+        String s ="pPoooyY";
+        boolean a = solution(s);
+        System.out.println(a);
+    }
+}
