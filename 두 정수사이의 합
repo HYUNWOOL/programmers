@@ -1,0 +1,25 @@
+class Solution {
+  static public long solution(int a, int b) {
+      long answer = 0;
+      int temp = 0;
+      if(a>b){
+          temp =a;
+          a=b;
+          b=temp;
+      }
+      for(int x =a; x<=b; x++){
+          answer+=a;
+          a++;
+      }
+      if(a==b){
+          answer = a;
+      }
+      return answer;
+  }
+    public static void main(String[] args) { 
+	        int a=3, b=5;
+	        long an = solution(a,b);
+	        System.out.println(an);
+		
+	      }
+	}
