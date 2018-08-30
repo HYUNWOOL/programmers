@@ -1,0 +1,24 @@
+import java.util.*;
+
+public class Solution {
+public int[] solution(int []arr){
+ List<Integer> lst = new ArrayList();
+        int num = 0;
+        for (int i = 0 ; i < arr.length ; i++) {
+            if(i == arr.length-1) {
+                lst.add(arr[i]);
+                break;
+            }
+            if(arr[i] != arr[i+1]) {
+                lst.add(arr[i]);
+            }
+        }
+        int[] answer = new int[lst.size()];
+        int temp = 0;
+        for (int k : lst) {
+            answer[temp++] = k;
+        }
+
+        return answer;
+    }
+}
